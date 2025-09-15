@@ -28,7 +28,35 @@
     section > p  ->  부모 > 자식   : > 자식 선택자
     */
     section > p {background-color: #ccc;}
-  
+    /* 
+    
+      */
+     /* 
+     모든 section태그의 후손 중 모든 p태그
+     section p
+     */
+    /* 
+    모든 section태그의 직계 자식 모든 p태그
+    section>p   */
+
+    /* 
+    모든 section태그의 직계 자식 모든 .box태그의 자식 모든 p
+     section > .box>p
+      section > .box>p {color:#f00} */
+
+
+      /* 
+
+      형요소 ~ 아우요소   
+      요소1 ~ 요소2  : 요소1 아래 동생인 모든 요소들
+      section h2 ~ p
+      */
+
+      /* 
+      형요소 + 바로아래동생요소
+      요소1 + 요소2  : 요소1에 바로인접한 요소2
+      */
+     section h2 + p{color:#f00;}
   </style>
 </head>
 <body>
