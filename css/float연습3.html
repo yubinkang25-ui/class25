@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 연습3 - 3단배너</title>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;}
+ 
+    /* common */
+    ol,ul{list-style: none;}
+    a:link,
+    a:visited,
+    a:active{
+      color:#333;
+      text-decoration: none;
+    }
+    a:hover{
+      color:#f00;
+    }
+    /* banner */
+   .banner-wrap{}
+   .banner-list{}
+   .banner-item{
+    width:calc(33.33% - 10px);
+
+    background-color: #ccc;
+   }
+   .banner-item>a{
+    display: block;
+
+    background-color: #ef6;
+   }
+   .banner-item .thubm{
+    /* width: auto; */
+    min-height: 200px;
+    background-color: #6fc;
+   }
+   .banner-item .desc{
+    /* background-color: transparent; */
+   }
+   .banner-item .title{
+    font-size: 2em;/*부모의 font-size를 기분*/
+    padding-top:0.5em;/*16px*/
+    /*em단위는 font-size를 제외하고 자신요소에 적용된
+    font-size를 기준으로 크기결정*/
+
+   }
+   .banner-item .goto{
+    font-size:1em; /*부모의 font-size를 기분*/
+    padding-top:0.5em; /*8px*/
+   }
+   .banner-item .goto:hover{
+     text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="banner-wrap">
+    <!-- ul.banner-list>li.banner-item>a>div.thubm+div.desc -->
+    <ul class="banner-list">
+      <li class="banner-item">
+        <a href="https://www.naver.com">
+          <div class="thubm">사진</div>
+          <div class="desc">
+            <p class="title">배너 제목</p>
+            <p class="goto">자세히 보기</p>
+          </div>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</body>
+</html>
